@@ -103,7 +103,7 @@ public class GuessTheNumberTests
             exists,
             "\n❌ Missing STUDY_NOTES.md file!\n" +
             "📝 The file should exist in the starter folder\n" +
-            "💡 Location: modules/week-5-guess-the-number/starter/STUDY_NOTES.md");
+            "💡 Location: modules/week-05-guess-the-number/starter/STUDY_NOTES.md");
     }
 
     [TestMethod]

@@ -77,10 +77,10 @@ Thanks for playing!
 
     ```bash
     # Mac/Linux:
-    cd modules/week-5-guess-the-number/starter
+    cd modules/week-05-guess-the-number/starter
 
     # Windows:
-    cd modules\week-5-guess-the-number\starter
+    cd modules\week-05-guess-the-number\starter
     ```
 
 2. Review the TODO comments in `Program.cs`
