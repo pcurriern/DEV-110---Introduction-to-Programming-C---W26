@@ -51,12 +51,12 @@ public class Program
         // Example: "Thanks for playing!"
     }
 
-    private static int ReadIntInRange(string prompt, int min, int max)
-    {
-        // Requirements:
-        // - Use a do-while loop
-        // - Use int.TryParse() for input
-        // - Repeat until the value is in range
-        // -- Hint: !isValid || value < min || value > max
-    }
+    // private static int ReadIntInRange(string prompt, int min, int max)
+    // {
+    // Requirements:
+    // - Use a do-while loop
+    // - Use int.TryParse() for input
+    // - Repeat until the value is in range
+    // -- Hint: !isValid || value < min || value > max
+    // }
 }
