@@ -85,6 +85,7 @@ public class Program
         Console.WriteLine($"Favorite Color: {favoriteColor}");
         Console.WriteLine($"Dream Job: {dreamJob}");
         Console.WriteLine($"Favorite Number: {favoriteNumber}");
+        Console.WriteLine($"Age: {age}");
 
         // - ACADEMIC DETAILS
         Console.WriteLine("\n════════════════ ACADEMIC DETAILS ════════════════");
@@ -104,7 +105,9 @@ public class Program
 
         Console.WriteLine("\n═══════════════════════════════════════════");
         Console.WriteLine("Profile complete! Good luck with your studies!");
-        Console.WriteLine("\nPress any key to exit...");//Prompt before exit
-        Console.ReadKey(); //Waits for user input before closing
+
+        
     }
 }
+
+
