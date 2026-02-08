@@ -46,42 +46,6 @@ Answer:
 
 Answer:
 
-## String Formatting
-
-**Which string formatting techniques did you use?**
-[List examples of interpolation, string.Format, and concatenation]
-
-Answer:
-
-**Where did you use alignment or padding?**
-[Explain PadLeft/PadRight or composite formatting]
-
-Answer:
-
-## String Tools
-
-**Which string helper methods did you use?**
-[Examples: Trim, Replace, Split, Join, ToUpper, ToLower]
-
-Answer:
-
-**How did you turn a phrase into a dashed version and word list?**
-[Explain Replace, Split, and Join]
-
-Answer:
-
-## Testing and Debugging
-
-**What inputs did you test to confirm your loops worked correctly?**
-[List several test cases]
-
-Answer:
-
-**What bugs or errors did you encounter and fix?**
-[Describe any logic or loop errors]
-
-Answer:
-
 ## What I Learned
 
 **Key takeaways from this week:**
