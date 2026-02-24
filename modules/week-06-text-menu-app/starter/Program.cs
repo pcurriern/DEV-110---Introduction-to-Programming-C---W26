@@ -29,13 +29,15 @@ public class Program
         // Hint: Use a while loop
         {
             // TODO 3: Print the menu box
-            // Required menu option texts (tests check for these):
-            // - 1) Greeting Card
-            // - 2) Name Tag Formatter
-            // - 3) Phrase Analyzer
-            // - 4) Fancy Receipt Line
-            // - 5) Menu Banner Builder
-            // - 6) Exit
+            string menuBorder = "+" + new string('-', 48) + "+";
+            Console.WriteLine(menuBorder);
+            Console.WriteLine($"| {"1) Greeting Card",-47}|");
+            Console.WriteLine($"| {"2) Name Tag Formatter",-47}|");
+            Console.WriteLine($"| {"3) Phrase Analyzer",-47}|");
+            Console.WriteLine($"| {"4) Fancy Receipt Line",-47}|");
+            Console.WriteLine($"| {"5) Menu Banner Builder",-47}|");
+            Console.WriteLine($"| {"6) Exit",-47}|");
+            Console.WriteLine(menuBorder);
 
             // TODO 4: Get menu choice from user
             // Use ReadIntInRange helper with prompt: "Choose an option (1-6): "
