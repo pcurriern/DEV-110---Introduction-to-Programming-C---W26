@@ -10,8 +10,6 @@
 - Builds a class roster using parallel arrays and a simple menu.
 - */
 
-using System.Collections;
-
 namespace ClassRoster;
 
 public class Program
