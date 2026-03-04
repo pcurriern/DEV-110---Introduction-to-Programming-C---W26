@@ -86,6 +86,7 @@ public class Program
                         count += toAdd;
                         Console.WriteLine("Students added."); // - Print: "Students added."
                     }
+                    break;
 
 
                 // ===== OPTION 2: Print class roster =====
@@ -105,6 +106,7 @@ public class Program
                     {
                         Console.WriteLine(line);
                     }
+                    break;
 
                 // ===== OPTION 3: Print roster (sorted) =====
                 case 3:
@@ -142,22 +144,24 @@ public class Program
                     {
                         Console.WriteLine(line);
                     }
+                    break;
 
                 // ===== OPTION 4: Exit =====
                 // TODO 8: When the user chooses 4, print: "Goodbye." and end the program
                 case 4:
                     Console.WriteLine("Goodbye.");
                     break;
+            }
 
-                    // TODO 9: Add a blank line between menu actions (but not after Exit)
-                    if (choice != 4)
-                    {
-                        Console.WriteLine();
-                    }
+            // TODO 9: Add a blank line between menu actions (but not after Exit)
+            if (choice != 4)
+            {
+                Console.WriteLine();
             }
 
             Console.WriteLine("(Starter project) Follow the TODO steps in Program.cs.");
         }
+    }
 
     private static int ReadIntInRange(string prompt, int min, int max)
     {
@@ -188,8 +192,6 @@ public class Program
         }
         // - Include BOTH name and credits on each line
         return lines;
-
-        return new string[0]; // Remove this placeholder and replace with the variable to created
     }
 
     private static void CopyUsedRoster(

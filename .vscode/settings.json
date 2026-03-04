@@ -13,7 +13,7 @@
   "files.trimTrailingWhitespace": true,
 
   // C# Specific Settings
-  "dotnet.defaultSolution": "disable",
+  "dotnet.defaultSolution": "dev-110-setup.sln",
   "[csharp]": {
     "editor.defaultFormatter": "ms-dotnettools.csharp",
     "editor.formatOnSave": true,

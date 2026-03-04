@@ -1,6 +1,7 @@
 {
   "version": "0.2.0",
   "configurations": [
+    
     {
       "name": "Week 01 - Hello GitHub",
       "type": "coreclr",
@@ -33,6 +34,45 @@
       "cwd": "${workspaceFolder}/modules/week-03-profile-card/starter",
       "console": "integratedTerminal",
       "stopAtEntry": false
+    },
+    {
+      "name": "Week 05 - Guess The Number",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/modules/week-05-guess-the-number/starter/bin/Debug/net9.0/GuessTheNumber.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/modules/week-05-guess-the-number/starter",
+      "console": "integratedTerminal",
+      "stopAtEntry": false
+    },
+    {
+      "name": "Week 06 - Text Menu App",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/modules/week-06-text-menu-app/starter/bin/Debug/net9.0/TextMenuApp.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/modules/week-06-text-menu-app/starter",
+      "console": "integratedTerminal",
+      "stopAtEntry": false
+    },
+    {
+      "name": "Week 07 - Class Roster",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/modules/week-07-class-roster/starter/bin/Debug/net9.0/ClassRoster.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/modules/week-07-class-roster/starter",
+      "console": "integratedTerminal",
+      "stopAtEntry": false
+    },
+    {
+      "name": "Week 07 - Class Roster (dotnet)",
+      "type": "dotnet",
+      "request": "launch",
+      "projectPath": "${workspaceFolder}/modules/week-07-class-roster/starter/ClassRoster.csproj"
     }
   ]
 }
