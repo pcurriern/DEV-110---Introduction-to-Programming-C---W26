@@ -18,8 +18,8 @@ This course is organized into 12 weekly modules, each building on the previous w
 | 8    | Program Structure + Debugging      | [MadLibs Generator](modules/week-08-mad-libs/)          |
 | 9    | Methods: Decomposition + Reuse     | [Methods Refactor](modules/week-09-methods-linq/)       |
 | 10   | File I/O Basics                    | [Mini CSV Tracker](modules/week-10-file-io/)            |
-| 11   | Open Lab / Final Project Work      | Work on Final Project                                   |
-| 12   | Final Project                      | TBD                                                     |
+| 11   | Open Lab / Finals Work             | Work on Final Project                                   |
+| 12   | YOUR OWN APP! Final Project (EC)   | [Mini CSV Tracker](final-project/)                      |
 
 ---
 
