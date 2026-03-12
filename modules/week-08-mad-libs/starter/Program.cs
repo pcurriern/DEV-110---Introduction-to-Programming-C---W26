@@ -3,7 +3,7 @@
 - Instructor: Zak Brinlee
 - Term: Winter 2026
 -
-- Programmer: YourName
+- Programmer: Parker Currier
 - Assignment: Week 8: Mad Libs (Structure + Debugging)
 -
 - What does this program do?:
@@ -47,62 +47,96 @@ public class Program
     // TODO 2: Implement ChooseTemplate
     // This method should:
     // - Print the two template options:
-    //   1) Debugging at the Zoo
-    //   2) The Standup Meeting
-    // - Use ReadIntInRange to get user's choice (1-2)
-    // - Return the appropriate StoryTemplate (see template details in README)
     private static StoryTemplate ChooseTemplate()
     {
-        throw new NotImplementedException();
+        Console.WriteLine("Choose a template:"); // - Print the two template options:
+        Console.WriteLine("1) Debugging at the Zoo"); //   1) Debugging at the Zoo
+        Console.WriteLine("2) The Standup Meeting");//   2) The Standup Meeting
+
+        int choice = ReadIntInRange("Choose a template (1-2): ", 1, 2); // - Use ReadIntInRange to get user's choice (1-2)
+
+        if (choice == 1)
+        {
+            return new DebuggingAtTheZooTemplate(); // - Return the appropriate StoryTemplate (see template details in README)
+        }
+        else
+        {
+            return new StandupMeetingTemplate();
+        }
     }
 
     // TODO 3: Implement CollectWords
     // This method should:
-    // - Use Logger.Info to log that word collection is starting
-    // - Create a string array the same length as template.Prompts
-    // - Loop through each prompt and use ReadNonEmptyString
-    // - Print a blank line after collection
-    // - Return the array of collected words
     private static string[] CollectWords(StoryTemplate template)
     {
-        throw new NotImplementedException();
+        Logger.Info("Starting word collection..."); // - Use Logger.Info to log that word collection is starting
+
+        string[] words = new string[template.Prompts.Length]; // - Create a string array the same length as template.Prompts
+
+        for (int i = 0; i < template.Prompts.Length; i++)
+        {
+            words[i] = ReadNonEmptyString(template.Prompts[i]); // - Loop through each prompt and use ReadNonEmptyString
+        }
+
+        Console.WriteLine();// - Print a blank line after collection
+
+        return words; // - Return the array of collected words
     }
 
     // TODO 4: Implement ReadYesNo
     // This method should:
-    // - Show the prompt
-    // - Read input (handle null with ?? string.Empty)
-    // - Trim the input
-    // - Accept "y" or "n" (case-insensitive)
-    // - Keep asking until valid input is provided
-    // - Return true for "y", false for "n"
     private static bool ReadYesNo(string prompt)
     {
-        throw new NotImplementedException();
+        while (true)
+        {
+            Console.Write(prompt); // - Show the prompt
+            string input = (Console.ReadLine() ?? string.Empty).Trim().ToLower(); // - Read input (handle null with ?? string.Empty)
+
+            if (input == "y") // - Accept "y" or "n" (case-insensitive)
+            {
+                return true;
+            }
+            else if (input == "n") // - Keep asking until valid input is provided
+            {
+                return false;
+            }
+            Console.WriteLine("Please enter 'y' or 'n'."); // - Return true for "y", false for "n"
+        }
     }
 
     // TODO 5: Implement ReadIntInRange
     // This method should:
-    // - Use a do-while loop
-    // - Show the prompt
-    // - Read input and use int.TryParse
-    // - Validate the number is between min and max (inclusive)
-    // - Keep asking until valid
-    // - Return the valid integer
     private static int ReadIntInRange(string prompt, int min, int max)
     {
-        throw new NotImplementedException();
+        int value;
+        bool isValid;
+
+        do// - Use a do-while loop
+        {
+            Console.Write(prompt);// - Show the prompt
+            string input = Console.ReadLine() ?? string.Empty;
+
+            isValid = int.TryParse(input, out value) && value >= min && value <= max; // - Read input and use int.TryParse // - Validate the number is between min and max (inclusive)
+        }
+        while (!isValid);  // - Keep asking until valid
+
+        return value; // - Return the valid integer
     }
 
     // TODO 6: Implement ReadNonEmptyString
     // This method should:
-    // - Show the prompt
-    // - Read input (handle null with ?? string.Empty)
-    // - Trim the input
-    // - Keep asking if input is empty or whitespace
-    // - Return the valid non-empty string
     private static string ReadNonEmptyString(string prompt)
     {
-        throw new NotImplementedException();
+        while (true)
+        {
+            Console.Write(prompt); // - Show the prompt
+            string input = (Console.ReadLine() ?? string.Empty).Trim(); // - Read input (handle null with ?? string.Empty) - Trim the input
+
+            if (!string.IsNullOrEmpty(input))  // - Keep asking if input is empty or whitespace
+            {
+                return input; // - Return the valid non-empty string
+            }
+            Console.WriteLine("Input cannot be empty. Please try again.");
+        }
     }
 }
