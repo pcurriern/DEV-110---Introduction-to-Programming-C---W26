@@ -27,23 +27,66 @@ public class StoryTemplate
 
     public string TemplateText { get; }
 
-    // TODO 1: Implement GenerateStory method
-    // This method should:
-    // - Validate that words.Length equals Prompts.Length
-    // - Call FormatStory to build the final story string
-    // - Return the formatted story
     public string GenerateStory(string[] words)
     {
-        throw new NotImplementedException();
+        if (words.Length != Prompts.Length)
+        {
+            throw new ArgumentException("Word count does not match prompts.");
+        }
+
+        return FormatStory(words);
     }
 
-    // TODO 2: Implement FormatStory method (private helper)
-    // This method should:
-    // - Convert string[] words to object[] (required for string.Format)
-    // - Call string.Format with TemplateText and the object array
-    // - Return the formatted story
     private string FormatStory(string[] words)
     {
-        throw new NotImplementedException();
+        object[] values = new object[words.Length];
+        for (int i = 0; i < words.Length; i++)
+        {
+            values[i] = words[i];
+        }
+
+        return string.Format(TemplateText, values);
+    }
+}
+
+public class DebuggingAtTheZooTemplate : StoryTemplate
+{
+    public DebuggingAtTheZooTemplate()
+        : base(
+            "Debugging at the Zoo",
+            new[]
+            {
+                "Enter an adjective: ",
+                "Enter an animal (plural): ",
+                "Enter a verb ending in -ing: ",
+                "Enter a programming language: ",
+                "Enter a debugging tool (example: breakpoint): ",
+                "Enter a number: ",
+                "Enter an emotion: ",
+                "Enter an exclamation: ",
+            },
+            "Today I visited the {0} zoo. I saw {1} {2} while writing {3}. I used a {4} {5} times until the bug disappeared. I felt {6} and yelled, \"{7}!\"")
+    {
+    }
+}
+
+public class StandupMeetingTemplate : StoryTemplate
+{
+    public StandupMeetingTemplate()
+        : base(
+            "The Standup Meeting",
+            new[]
+            {
+                "Enter a name: ",
+                "Enter an adjective: ",
+                "Enter a noun: ",
+                "Enter a verb (past tense): ",
+                "Enter a number: ",
+                "Enter a plural noun: ",
+                "Enter a type of bug (example: null reference): ",
+                "Enter a snack: ",
+            },
+            "At standup, {0} gave a {1} update about a {2} that {3} {4} times. The team tracked down {6}, closed {5}, and celebrated with {7}.")
+    {
     }
 }
